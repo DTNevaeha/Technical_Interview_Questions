@@ -18,8 +18,13 @@ class Square(Shape):
 		print(self.printChar * self.width)
 
 class Triangle(Shape):
+	height = 5
+	width = 2 * height
+	
 	def printRow(self, i):
-		print(self.printChar * (i + 1))
+		triangleWidth = 2 * i + 1
+		padding = int(self.width - triangleWidth) // 2
+		print(' ' * padding + self.printChar * triangleWidth)
 
 t = Triangle()
 t.print()
