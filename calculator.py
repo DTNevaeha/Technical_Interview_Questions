@@ -6,8 +6,6 @@ print("Hello, please select what you would like to do below."
 
 class Addition:
     def add():
-        # x = input("Enter the first number: ")
-        # y = input("Enter the second number: ")
         try: 
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
@@ -21,14 +19,53 @@ class Addition:
             print("\n What would you like to do next?"
               "\n 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
 
+
 class Subtration:
-    pass
+    def subtract():
+        try: 
+            x = float(input("Enter the first number: "))
+            y = float(input("Enter the second number: "))
+        except ValueError:
+            print("Please enter a valid number \n"
+                    " 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
+            # continue
+        else:
+            z = float(x) - float(y)
+            print(f"{x} - {y} = {z}")
+            print("\n What would you like to do next?"
+                "\n 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
+
 
 class Multiplication:
-    pass
+    def multiply():
+        try: 
+            x = float(input("Enter the first number: "))
+            y = float(input("Enter the second number: "))
+        except ValueError:
+            print("Please enter a valid number \n"
+                    " 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
+            # continue
+        else:
+            z = float(x) * float(y)
+            print(f"{x} * {y} = {z}")
+            print("\n What would you like to do next?"
+                "\n 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
+
 
 class Division:
-    pass
+    def divide():
+        try: 
+            x = float(input("Enter the first number: "))
+            y = float(input("Enter the second number: "))
+        except ValueError:
+            print("Please enter a valid number \n"
+                    " 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
+            # continue
+        else:
+            z = float(x) / float(y)
+            print(f"{x} / {y} = {z}")
+            print("\n What would you like to do next?"
+                "\n 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide \n Q - to quit")
 
 
 while True:
@@ -41,10 +78,12 @@ while True:
         Addition.add()
     elif selection == '2':
         print("You chose 2")
+        Subtration.subtract()
     elif selection == '3':
-        print("You chose 3")
+        Multiplication.multiply()
     elif selection == '4':
         print("You chose 4")
+        Division.divide()
     else:
         print("That is not a valid input")
 
