@@ -24,7 +24,7 @@ print("\n" + str(remove_last))
 print(people)
 
 
-## Using a list of
+## Using an Array of numbers
 numbers = [0, 2, 8, 6, 15, 23, 1, 109, 2, 2, 6, 8]
 print(' '.join(map(str, numbers))) # This handles mixed types of data, such as int to string to print on the same line.
 
