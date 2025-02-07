@@ -54,4 +54,3 @@ print(numbers) # Show array after removing 4th
 for number in numbers:
         numbers.remove(number)
 print(numbers) # Show array after removing odd numbers
-
