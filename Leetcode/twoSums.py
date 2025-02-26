@@ -6,6 +6,19 @@ You can return the answer in any order.
 '''
 
 
+def targetElements(numberList, targetNumber):
+    for number in numberList:
+        for element in numberList:
+            if number + element == targetNumber and numberList.index(number) != numberList.index(element):
+                return [numberList.index(number), numberList.index(element)]
+    return []
+
+
+print("TargetElements")
+print(targetElements([5, 4, 2, 3], 5)) # Output: [2,3]
+print(targetElements([2, 4, -3, 8], 1)) # Output: [1,2]
+print(targetElements([1, 2, 3, 4], 8)) # Output: []
+
 
 class Solution(object):
     def twoSum(self, nums, target) -> list[int]:
@@ -26,7 +39,10 @@ class Solution(object):
 nums: list[int] = [2,7,11,15]
 target: int = 9
 solution = Solution()
+print()
+print("twoSum")
 print(solution.twoSum(nums, target)) # Output: [0,1]
 print(solution.twoSum([3,2,4], 6)) # Output: [1,2]
 print(solution.twoSum([3,3], 6)) # Output: [0,1]
 print(solution.twoSum([0,3,5,15,8], 9)) # Output: []
+
