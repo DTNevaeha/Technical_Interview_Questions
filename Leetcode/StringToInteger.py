@@ -27,7 +27,7 @@ class Solution(object):
                 if replacedString == "-" or replacedString == "+":
                     return 0
                 break
-            if character.isnumeric() or (character in ["-", "+"] and replacedString == ""):
+            if character.isnumeric() or character in ["-", "+"]:
                 replacedString += character
 
         if replacedString == "" or replacedString == "-" or replacedString == "+" or replacedString.isalpha():
