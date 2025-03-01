@@ -15,8 +15,6 @@ CM            900
 M             1000
 """
 
-MCMXCIV = 1000 + 900 + 90 + 4
-
 
 def romanToInt(numerals: str) -> int:
     numerals = (
